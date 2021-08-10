@@ -1,0 +1,11 @@
+title: "AR20386: Mathematics 2"
+author: "Nick McCullen"  # The author of the book
+logo: Figures/uob-logo.png
+execute:
+  execute_notebooks: "off"
+# Launch button settings
+launch_buttons:
+  notebook_interface        : classic  # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url             : ""  # The URL of the BinderHub (e.g., https://
+  
+
