@@ -1,15 +1,15 @@
 format: jb-article
-root: Maths2_000
+root: Maths2_0
 options:  # The options key will be applied to all chapters, but not sub-sections
-  numbered: 2
+  numbered: 1
 sections:
-- file: Maths2_101
-- file: Maths2_102
-- file: Maths2_203
-- file: Maths2_204
-- file: Maths2_205
-- file: Maths2_206
-- file: Maths2_307
-- file: Maths2_308
-- file: Maths2_309
-- file: Maths2_310
+- file: Maths2_1a
+- file: Maths2_2a
+- file: Maths2_3a
+- file: Maths2_4a
+- file: Maths2_5a
+- file: Maths2_6a
+- file: Maths2_7a
+- file: Maths2_8a
+- file: Maths2_9a
+- file: Maths2_10a

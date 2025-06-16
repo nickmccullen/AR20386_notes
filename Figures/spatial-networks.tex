@@ -1,0 +1,62 @@
+\documentclass{jk-article}
+
+\usepackage[round, sort, numbers]{natbib}
+
+\title{Diffusing energy efficiency improvements through spatially-embedded social networks}
+\author{James Keirstead}
+
+\begin{document}
+\maketitle
+
+\section{Background and motivation}
+
+\subsection{Policy context}
+Energy policy in the UK is currently guided by three broad goals: ensuring secure supplies of energy, delivering affordable energy supplies to consumers and industry (which includes reducing fuel poverty levels), and to achieve legally binding targets to reduce greenhouse gas emissions by 80\% by 2050 versus a 1990 baseline \cite{DECC_2012}.  Accomplishing these ambitions will require substantial changes at all levels of the UK energy system, from replacing old power generation facilities with new low carbon generation, enhancing grid infrastructure to support this new generation and incorporate the latest ICT innovations, reforming the electricity market to promote the necessary investment from industry while maintaining affordability, down to improvements in the efficiency of end-use energy demand.
+
+Our interest lies with this final issue, particularly the built environment.  The UK has approximately 27 million households and at current replacement rates it has been estimated that the housing stock will be replaced in over 1000 years.  This implies that substantial improvements in the energy efficiency of existing homes must be achieved if these various policies, in particular GHG reductions are to be realized.
+
+The diffusion of energy efficiency technologies has been widely studied, with historical approaches focusing largely on either the choices of individual households (or technology adopters) \cite[e.g][]{Labay_Kinnear_1981, Wustenhagen_Markard_Truffer_2003, Baker_2012} or the aggregate transitions in a population \cite[e.g.][]{Rogers_2003, Fouquet_2010}.  However recent research has highlighted how complex networks approaches can unify these two perspectives, providing a mechanistic explanation of adoption at the level of the individual but accounting for the wider social environment \cite{McCullen_et_al_2013, Tran_2012}.  
+In their original model, \cite{McCullen_et_al_2013} modelled the adoption process as a utility function with three components: $p$ the perceived intrinsic benefits of adopting the technology, $s$ the influence of one's immediate social networks, and $m$ the influence of wider social norms.  While this model captures the dynamics of \emph{social} networks in technology adoption decisions, it does not account for the impact of \emph{spatial} networks.\footnote{The Tran model also omits the spatial dimension.}  Yet many energy efficiency technologies such as solar photovoltaics, electric vehicles, or micro-wind are visible from the outside of a dwelling meaning that those passing by might see the technology and be prompted to consider adopting it.  Furthermore many local authorities are promoting area-based approaches to energy efficiency, whereby specific neighbourhoods are targetted for retrofits and other interventions.  This highlights the importance of spatial factors to the diffuse of energy efficiency measures.
+
+\subsection{Spatially-embedded social networks}
+There is an extensive literature on complex networks which can describe social, information, technological, or biological systems \cite[see][for a review]{Newman_2003}.  In the case of energy efficiency we are most concerned with diffusion processes on social networks.  However it is only recently that researchers have moved beyond topological analyses of social networks to consider their spatial characteristics.  Specifically, researchers have focused on two observed properties of social networks: \emph{homophily}, the tendency of like individuals to group together, and \emph{focus constraint}, the notion that social connections depend on opportunities for social constraint \cite{Expert_Evans_Blondel_Lambiotte_2011}.  Both of these mechanisms are clearly influenced by spatial distance, not just topological distance, and this dependency is often modelled by stating that the probability of connecting two individuals within a social network can be modelled as a function of the distance between them \cite{Barthelemy_2011, Kosmidis_Havlin_Bunde_2008, Wong_Pattison_Robins_2006}.\footnote{The precise form of this relationship varies but is typically given as $p(d) \propto d^{-\alpha}$, where $\alpha$ has been empirically found to be around 1.6 in many cases (though 0.5 in one other paper I saw?).}
+
+Many of these studies focus on the question of how space effects community formation and other forms of social connections \cite{Scellato_Lambiotte_Mascolo_2010, Expert_Evans_Blondel_Lambiotte_2011}.  Furthermore the studies are primarily static, using large datasets collected from mobile phone or location-based social networks (e.g.\ FourSquare or Twitter) over a limited period of time.  However in order to understand the diffusion of energy efficiency technologies, a dynamic view must be adopted to understand both how social communities change over time (and space) and how this shapes the spread of desirable technologies and practices.  In these contexts, other types of network measure (such as centrality \cite{Crucitti_Latora_Porta_2006}) may be important complements to more traditional measures of social network struture such as clustering and edge length distribution.
+
+There is also a related literature on ``network governance'', i.e.\ informal coordination rather than top-down bureaucratic structure, and the way in which this shapes the specialization and attributes of firms within complex product chains \cite{Jones_Hesterly_Borgatti_1997}.  The role of firms is of course central to the diffusion of energy efficiency technologies, particularly when the UK government is trying to stimulate such an ecosystem through its Green Deal policy.
+
+\section{Aims and objectives}
+The goal of our research is therefore to understand how spatially-embedded social networks (of both households and firms?) contribute to the diffusion of energy efficiency technologies and practices.  Our specific objectives are:
+\begin{itemize}
+\item To develop a dynamic mathematical model of energy efficiency adoption decisions at the household level, incorporating both spatial and social network effects;
+\item To conduct parameter studies to understand the dynamics of this model in response to policy interventions such as: untargetted advertising campaigns (social norms), targetted household mailings (perceived benefits), diffusion incentives (social networks), visible branding (spatial element);
+\item to develop recommendations for the delivery of both (a) area-based energy efficiency strategies and (b) centralised (i.e.\ aspatial) policies like the Green Deal;
+\item and (maybe) something on firms?  Build a single ABM that combines both households and firms?
+\end{itemize}
+
+\section{Methodology}
+A few notes on methodology from some of the papers I've seen:
+\begin{itemize}
+\item Data often come from online social networks or mobile phone records.  Twitter seems like the easiest one to mine.
+\item Studies often use null models, both spatial only and social only, to highlight the advantages of a model that combines both \cite{Expert_Evans_Blondel_Lambiotte_2011, Scellato_Lambiotte_Mascolo_2010}
+\item Ofgem maintains the Central FIT Register which provides information on accredited installations, which might be a useful data source (\url{https://www.ofgem.gov.uk/environmental-programmes/feed-tariff-fit-scheme})
+\item From way back in the early days of social network analysis, one useful technique has been to get participants to forward messages (see Milgram's letter-forwarding experiment and \cite{Illenberger_Flotterod_Kowald_Nagel_2003}).  We could maybe try something similar?
+\end{itemize}
+
+It's a bit early to talk about work packages just yet, but I could imagine:
+\begin{itemize}
+\item one on model development (one households, one firms)
+\item one on data collection
+\item one on policy design
+\item one on management
+\end{itemize}
+
+\section{Funders and partners}
+
+EPSRC still has some money in ``research base'' funding (around £200 million this year, £400 million next year, versus £750 million last year).  If we shifted the emphasis to understanding the social networks side of things (particularly the interaction between firms and households), then the ESRC might be interested.  But as Frin said, three engineers applying might look a bit odd.
+
+As for research partners, it seems that DECC would be an obvious one, as would any sort of installers network or industry group (or a specific company).  Having a local authority onboard would be good as well, both to give the research some geographic focus for data collection but also to run experiments and have some impact.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}
